@@ -1,0 +1,184 @@
+//button
+.btn {
+    text-transform: capitalize;
+    font-family: $font-montserrat;
+    padding: 0.75rem 1rem;
+    border: 2px solid transparent;
+    @include font-size(1.125rem);
+    transition: all 0.3s ease-in-out;
+    background-color: $lime-green;
+
+    @include media-breakpoint-up(md) {
+        @include font-size(1.375rem);
+        padding: 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+        @include font-size(1.5625rem);
+        padding: 1.25rem 1.2rem;
+    }
+
+
+    &.btn-primary {
+        min-width: 125px;
+
+        @include media-breakpoint-up(md) {
+            @include font-size(1.375rem);
+            min-width: 130px;
+            padding: 1rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 200px;
+
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include font-size(1.5625rem);
+            padding: 1.25rem 1.2rem;
+            min-width: 230px;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            border-color: $lime-green;
+            color: $lime-green;
+        }
+
+    }
+
+    &.btn-secondary {
+        border-color: $black;
+        background-color: transparent;
+        color: $black;
+        min-width: 125px;
+
+        @include media-breakpoint-up(md) {
+            min-width: 130px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 200px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            min-width: 230px;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: $black;
+            border-color: transparent;
+            color: $white;
+        }
+    }
+
+    &.btn-tertiary {
+        min-width: 180px;
+        color: $white;
+
+        @include media-breakpoint-up(md) {
+            min-width: 200px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 250px;
+            padding: 1.375rem 1.2rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            min-width: 301px;
+            padding: 1.7063rem 1.2rem;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            border-color: $lime-green;
+            color: $lime-green;
+        }
+    }
+
+    &.btn-sm {
+        color: $lime-green;
+        border-color: $lime-green;
+        background-color: $white;
+        min-width: 160px;
+        border-radius: 6px;
+
+        @include media-breakpoint-up(md) {
+            @include font-size(1.375rem);
+            min-width: 170px;
+            padding: 1rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include font-size(1.5625rem);
+            padding: 0.9688rem 1.2rem;
+            min-width: 182px;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: $lime-green;
+            border-color: transparent;
+            color: $white;
+            border-color: $white;
+        }
+
+        &--alt {
+            background-color: $lime-green;
+            color: $white;
+            border-color: transparent;
+
+            &:focus,
+            &:hover {
+                background-color: transparent;
+                border-color: $lime-green;
+                color: $lime-green;
+            }
+        }
+    }
+
+    &.btn-icon {
+        @include font-size(0.875rem);
+        color: $white;
+        min-width: 135px;
+        padding: 0.55rem 1rem;
+
+
+        @include media-breakpoint-up(md) {
+            min-width: 145px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            min-width: 151px;
+            padding: 0.35rem 1.2rem;
+            @include font-size(1rem);
+        }
+
+        &:focus,
+        &:hover {
+            background-color: $white;
+            border-color: transparent;
+            color: $black;
+        }
+
+        i {
+            position: relative;
+            padding-left: 0.3125rem;
+            top: 3px;
+        }
+
+        &--alt {
+            color: $lime-green;
+            background-color: transparent;
+            padding-left: 0;
+
+            @include media-breakpoint-up(lg) {
+                @include font-size(1.125rem);
+            }
+        }
+    }
+}

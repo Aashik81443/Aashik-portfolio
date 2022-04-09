@@ -1,0 +1,82 @@
+.progress {
+    height: 0.4rem;
+    background-color: rgba($lime-green, 0.25);
+
+    &-bar {
+        background-color: $lime-green;
+    }
+
+    &-block {
+        font-family: $font-montserrat;
+        max-width: 280px;
+
+        @include media-breakpoint-up(md) {
+            max-width: 300px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 350px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            max-width: 380px;
+        }
+
+        h3 {
+
+            font-weight: 700;
+            @include font-size(1.2rem);
+            margin-bottom: 0.875rem;
+
+            @include media-breakpoint-up(md) {
+                @include font-size(1.5rem);
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include font-size(1.8rem);
+            }
+
+            @include media-breakpoint-up(xl) {
+                @include font-size(2.3rem);
+            }
+        }
+    }
+
+    &-content {
+        text-transform: capitalize;
+
+        h4 {
+            @include font-size(1rem);
+            font-weight: 700;
+            margin-bottom: 0;
+            line-height: 1.6;
+
+            @include media-breakpoint-up(md) {
+                @include font-size(1.2rem);
+
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include font-size(1.4rem);
+            }
+
+            @include media-breakpoint-up(xl) {
+                @include font-size(1.6875rem);
+
+            }
+
+            span {
+                @include font-size(0.875rem);
+                color: $gray-900;
+                font-weight: 500;
+                display: block;
+
+                @include media-breakpoint-up(lg) {
+                    @include font-size(1.125rem);
+
+                }
+            }
+        }
+
+    }
+}

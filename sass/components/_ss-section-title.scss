@@ -1,0 +1,50 @@
+.section-title {
+    font-family: $font-montserrat;
+    text-transform: capitalize;
+
+    h2 {
+        @include font-size(1.125rem);
+        color: $lime-green;
+        background-color: rgba($lime-green, 0.25);
+        padding: 0.5rem;
+        border-radius: 6px;
+        // font-weight: 700;        
+        display: inline-block;
+        position: relative;
+        // padding-bottom: 1rem;
+        
+        @include media-breakpoint-up(lg) {
+            @include font-size(1.25rem);
+        }
+
+
+        // &::before {
+        //     position: absolute;
+        //     content: '';
+        //     left: 50%;
+        //     bottom: 0;
+        //     transform: translateX(-50%);
+        //     width: 65px;
+        //     height: 4px;
+        //     background: $lime-green;
+        // }
+    }
+
+    h3 {
+        @include font-size(1.5625rem);
+        color: $black;
+        font-weight: 600;
+
+        @include media-breakpoint-up(md) {
+            @include font-size(1.875rem);
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(2.1875rem);
+        }
+
+        @include media-breakpoint-up(xl) {
+            @include font-size(2.5rem);
+        }
+    }
+}

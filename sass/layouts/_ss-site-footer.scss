@@ -1,0 +1,112 @@
+.site-footer {
+    background: #f1f1f1;
+    .footer {
+
+        &-logo {
+            img {
+                max-width: 180px;
+
+                @include media-breakpoint-up(lg) {
+                    max-width: 200px;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    max-width: 100%
+                }
+            }
+        }
+
+        &-content {
+            @include font-size(1rem);
+        }
+
+        &-right {
+
+            @include media-breakpoint-up(lg) {
+                justify-content: end;
+            }
+
+        }
+    }
+
+    .right {
+        h3 {
+            font-family: $font-montserrat;
+            @include font-size(1.3rem);
+            color: $black;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            text-align: center;
+
+            @include media-breakpoint-down(md) {
+                text-align: left;
+            }
+
+            @include media-breakpoint-up(lg) {
+                @include font-size(1.5rem);
+
+            }
+
+            @include media-breakpoint-up(xl) {
+                @include font-size(2rem);
+                max-width: 655px;
+                margin-left: auto;
+            }
+        }
+    }
+
+    .email,
+    .phone,
+    .location {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 1rem;
+        }
+
+        h4 {
+            color: $lime-green;
+            text-transform: uppercase;
+            @include font-size(1.125rem);
+        }
+
+        a {
+            color: $black;
+            @include font-size(0.9rem);
+            font-weight: 600;
+
+            @include media-breakpoint-up(xl) {
+                @include font-size(1rem);
+
+            }
+
+            &:focus,
+            &:hover {
+                text-decoration: none;
+                color: $lime-green;
+            }
+
+        }
+    }
+
+    .copyright {
+        border-top: 2px solid gray;
+        padding: 1.5rem 0.5rem;
+
+        span {
+            @include font-size(1rem);
+
+            @include media-breakpoint-up(lg) {
+                @include font-size(1.125rem);
+
+            }
+        }
+        &-link{
+            color: $lime-green;
+
+            &:focus,
+            &:hover{
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+}

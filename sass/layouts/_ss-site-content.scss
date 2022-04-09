@@ -1,0 +1,130 @@
+//about
+.about {
+    background: #f1f1f1;
+
+    &-media {
+        position: relative;
+
+        img {
+            &::before {
+                position: absolute;
+                background-image: url(assets/images/dotted-img.png);
+                content: '';
+                top: 0;
+                right: 0;
+            }
+        }
+
+    }
+
+    .row {
+        align-items: center;
+    }
+
+    &-content {
+        max-width: 588px;
+        margin-left: auto;
+        @include font-size(0.875rem);
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(1rem);
+
+        }
+
+    }
+}
+
+//sertvices
+.services {
+    .row {
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+        }
+
+        [class^="col-"] {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+//skill
+.skill {
+    .row {
+        [class^="col-"] {
+            margin-bottom: 1.5rem;
+        }
+
+        @include media-breakpoint-down(sm){
+            [class^="col-"] {
+               @include make-col(6);
+            }
+        }
+    }
+}
+
+//work
+.work {
+    background: #f1f1f1;
+
+    .row {
+        justify-content: center;
+
+        [class^="col-"] {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .nav {
+
+        &-item {
+            color: $gray-900;
+            text-transform: capitalize;
+            cursor: pointer;
+            padding: 0.5rem;
+
+            &:focus,
+            &:hover {
+                color: $lime-green;
+            }
+
+            &.active {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    width: 35px;
+                    height: 3px;
+                    background: $lime-green;
+                }
+            }
+        }
+
+        &-link {
+            
+        }
+    }
+}
+
+//blog
+.blog {
+    background: #f1f1f1;
+
+    .row {
+        justify-content: center;
+
+        [class^="col-"] {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+//contact
+.contact {
+    .container {
+        max-width: 1238px;
+    }
+}

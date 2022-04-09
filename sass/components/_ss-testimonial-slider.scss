@@ -1,0 +1,99 @@
+//testimonial
+.testimonial {
+    &-slider {
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 3rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 5rem;
+
+        }
+
+        &__item {
+            padding: 1rem;
+        }
+
+        .slick {
+            &-arrow {
+                font-size: 0;
+                line-height: 1;
+                border: 0;
+                background-color: transparent;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                z-index: 5;
+                color: $white;
+                transition: all 0.3s ease-in-out;
+
+                @include media-breakpoint-down(lg) {
+                    margin-right: 0.5rem;
+                }
+
+                &:focus,
+                &:hover {
+                    outline: 0;
+                }
+
+                &:before {
+                    content: ' ';
+                    font-family: 'icomoon';
+                    @include font-size(1.4375rem);
+                    color: $lime-green;
+                    background: $white;
+                    padding: 0.8rem;
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 15px rgba($black, 0.20);
+
+                }
+            }
+
+            &-prev {
+                left: auto;
+                right: 50%;
+
+                @include media-breakpoint-up(lg) {
+                    right: auto;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+
+                &:before {
+                    content: '\e900';
+                }
+            }
+
+            &-next {
+                right: auto;
+                left: 50%;
+
+                @include media-breakpoint-down(lg){
+                    margin-left: 0.8rem;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    right: 0;
+                    left: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:before {
+                    content: '\e901';
+                }
+            }
+
+            &-track {
+                display: flex;
+            }
+
+            &-slide {
+                height: inherit;
+            }
+        }
+    }
+}
