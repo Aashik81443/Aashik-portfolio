@@ -49,13 +49,6 @@ $(document).ready(function () {
         delay: 10,
     });
 
-
-    //   fancybox
-    $('.fancybox').fancybox({
-        openEffect: 'none',
-        closeEffect: 'none'
-    });
-
     //isotope filter
     $(document).ready(function () {
 
