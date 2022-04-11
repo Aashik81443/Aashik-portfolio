@@ -44,6 +44,12 @@
         [class^="col-"] {
             margin-bottom: 1.5rem;
         }
+
+        @include media-breakpoint-up(lg) {
+            [class^="col-"] {
+                margin-bottom: 2rem;
+            }
+        }
     }
 }
 
@@ -54,9 +60,9 @@
             margin-bottom: 1.5rem;
         }
 
-        @include media-breakpoint-down(sm){
+        @include media-breakpoint-down(sm) {
             [class^="col-"] {
-               @include make-col(6);
+                @include make-col(6);
             }
         }
     }
@@ -103,9 +109,7 @@
             }
         }
 
-        &-link {
-            
-        }
+        &-link {}
     }
 }
 
