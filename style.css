@@ -13257,6 +13257,19 @@ Due to the split circle of progress-left and progress right, we must use the ani
   margin-bottom: 1em;
 }
 
+@media (max-width: 991.98px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: white;
+    padding: 0.625rem 0;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+}
+
 @media (min-width: 992px) {
   .site-header .navbar-nav .nav-item {
     padding-left: 0.3rem;
@@ -13302,6 +13315,12 @@ Due to the split circle of progress-left and progress right, we must use the ani
 @media (min-width: 1200px) {
   .site-header .navbar-brand {
     max-width: 233px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .site-content {
+    padding-top: 100px;
   }
 }
 

@@ -1,3 +1,9 @@
+.site-content{
+    @include media-breakpoint-down(md){
+        padding-top: 100px;
+    }
+}
+
 //about
 .about {
     background: #f1f1f1;
